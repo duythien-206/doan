@@ -1,0 +1,219 @@
+<template>
+  <div>
+    <v-row>
+      <!-- <v-dialog v-model="dialog" persistent width="1024"> -->
+      <!-- <template v-slot:activator="{ props }">
+          <v-btn color="primary" v-bind="props"> Thêm bài quiz</v-btn>
+        </template> -->
+      <v-form @submit.prevent="submit()" ref="form">
+        <v-card style="height: 90vh; overflow: scroll; width: 1024px">
+          <v-card-title>
+            <span class="text-h5">Thêm bài quiz</span>
+          </v-card-title>
+          <v-card-text>
+            <v-container>
+              <v-row>
+                <v-col cols="12" sm="12" md="12">
+                  <v-text-field
+                    label="Tên bài học*"
+                    hint="Với bài học dạng câu hỏi tên sẽ là Quiz: + tên bài học"
+                    v-model="lessonName"
+                    :rules="rules"
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12" sm="6" md="6">
+                  <v-text-field
+                    label="Mô tả*"
+                    hint="Mô tả bài học"
+                    :rules="rules"
+                    v-model="lessonDescription"
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12" sm="6" md="6">
+                  <v-text-field
+                    label="Thời lượng*"
+                    hint="Thời lượng của bài học"
+                    :rules="rules"
+                    v-model="lessonTime"
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12">
+                  <v-text-field
+                    label="Câu hỏi*"
+                    hint="Câu hỏi hiển thị"
+                    :rules="rules"
+                    v-model="question"
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12">
+                  <v-text-field
+                    label="Đáp án A*"
+                    hint="Đáp án A"
+                    :rules="rules"
+                    v-model="answera"
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12">
+                  <v-text-field
+                    label="Đáp án B*"
+                    hint="Đáp án B"
+                    :rules="rules"
+                    v-model="answerb"
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12">
+                  <v-text-field
+                    label="Đáp án C*"
+                    hint="Đáp án C"
+                    :rules="rules"
+                    v-model="answerc"
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12">
+                  <v-text-field
+                    label="Đáp án D*"
+                    hint="Đáp án D"
+                    :rules="rules"
+                    v-model="answerd"
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12">
+                  <v-select
+                    label="Đáp án đúng"
+                    :items="['A', 'B', 'C', 'D']"
+                    :rules="rules"
+                    v-model="answer"
+                  ></v-select>
+                </v-col>
+              </v-row>
+            </v-container>
+            <small>* là trường là bắt buộc!</small>
+          </v-card-text>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn
+              color="blue-darken-1"
+              variant="text"
+              @click="setDialogOff(3)"
+            >
+              Hủy
+            </v-btn>
+            <v-btn
+              color="blue-darken-1"
+              :loading="btnLoading"
+              variant="text"
+              type="submit"
+            >
+              Thêm bài học
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-form>
+      <!-- </v-dialog> -->
+    </v-row>
+  </div>
+</template>
+
+<script>
+import AdminAPI from "../../../apis/APIAdmin/AdminAPI.ts";
+import { mapMutations } from "vuex";
+export default {
+  name: "AddQuestion",
+  data() {
+    return {
+      lessonName: "",
+      lessonDescription: "",
+      lessonTime: "",
+      question: "",
+      answera: "",
+      answerb: "",
+      answerc: "",
+      answerd: "",
+      answer: "A",
+      dialog: false,
+      btnLoading: false,
+      rules: [
+        (value) => {
+          if (value) return true;
+          return "Không được để trống!";
+        },
+      ],
+    };
+  },
+  methods: {
+    ...mapMutations(["setIsLoadedData"]),
+    getData() {
+      var answerResult;
+      switch (this.answer) {
+        case "A":
+          answerResult = 1;
+          break;
+        case "B":
+          answerResult = 2;
+          break;
+        case "C":
+          answerResult = 3;
+          break;
+        case "D":
+          answerResult = 4;
+          break;
+        default:
+          break;
+      }
+      return {
+        lessonName: this.lessonName,
+        lessonDescription: this.lessonDescription,
+        lessonTime: this.lessonTime,
+        question: this.question,
+        answerA: this.answera,
+        answerB: this.answerb,
+        answerC: this.answerc,
+        answerD: this.answerd,
+        answer: answerResult,
+      };
+    },
+    async submit() {
+      this.btnLoading = true;
+      if (
+        this.lessonName.trim().length < 1 ||
+        this.lessonDescription.trim().length < 1 ||
+        this.lessonTime.trim().length < 1 ||
+        this.question.trim().length < 1 ||
+        this.answera.trim().length < 1 ||
+        this.answerb.trim().length < 1 ||
+        this.answerc.trim().length < 1 ||
+        this.answerd.trim().length < 1
+      ) {
+        this.btnLoading = false;
+        return;
+      }
+      const token = localStorage.getItem("token");
+      const result = await AdminAPI.addQuestionLesson(this.getData(), token);
+      if (result.data.status == 1) {
+        this.dialog = false;
+        this.lessonName = "";
+        this.lessonDescription = "";
+        this.lessonTime = "";
+        this.question = "";
+        this.answera = "";
+        this.answerb = "";
+        this.answerc = "";
+        this.answerd = "";
+        this.answer = "A";
+        this.getLessonDetail();
+        this.setDialogOff(1);
+      }
+      if (result.data.status == 2) {
+        this.setDialogOff(2);
+      }
+      this.btnLoading = false;
+    },
+  },
+  props: {
+    getLessonDetail: Function,
+    setDialogOff: Function,
+  },
+};
+</script>
+
+<style lang="css" scoped></style>
