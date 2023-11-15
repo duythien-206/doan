@@ -105,7 +105,7 @@ export default {
   methods: {
     async getData(page) {
       const data = await AdminAPI.getStudentOfCourse(
-        this.item.courseId,
+        this.item?.courseId,
         page,
         localStorage.getItem("token")
       );

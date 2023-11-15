@@ -13,30 +13,21 @@ public static string SecretKey()
         {
             return "npqhdyzryqtirqiqazozklrfxdogjbdy";
         }
-        public static string DBConnectVPS()
-        {
-            return "Data Source=VPS\\SQLEXPRESS;Integrated Security=false;Initial Catalog=djxuyen1_coding;MultipleActiveResultSets=True;User ID= sa;Password =12341234";
-        }
+      
         public static string DBConnect()
         {
-            return "Data Source=localhost;Initial Catalog=gaew;Integrated Security=True;encrypt=true;trustservercertificate=true;MultipleActiveResultSets=True;";
+            return "Data Source=localhost;Initial Catalog=djxuyen1_coding;Integrated Security=True;encrypt=true;trustservercertificate=true;MultipleActiveResultSets=True;";
         }
-        public static string DBConnectDeploy()
-        {
-            return "Server=localhost;Integrated Security=false;Initial Catalog=djxuyen1_coding;MultipleActiveResultSets=True;User ID= djxuyen1_djxuyen1;Password =Mvmvmv99@";
-        }
-        public static string DBConnectHostingRemote()
-        {
-            return "Server=125.212.224.205;Integrated Security=false;Initial Catalog=djxuyen1_coding;MultipleActiveResultSets=True;User ID= djxuyen1_djxuyen1;Password =Mvmvmv99@";
-        }
+    
+      
         public static string[] emailConfig()
         {
-            return new string[] { "do.quanganh99zz@gmail.com", "hnfoowwjgkagrbxu", "smtp.gmail.com", "587" };
+            return new string[] { "lethien202901@gmail.com", "hnfoowwjgkagrbxu", "smtp.gmail.com", "587" };
         }
         public static string enviroment()
         {
-          //  return "http://localhost:8080";
-            return "https://dj-xuyenchi.edu.vn";
+            return "http://localhost:8080";
+         //   return "https://dj-xuyenchi.edu.vn";
         }
         public static string defaultImage()
         {

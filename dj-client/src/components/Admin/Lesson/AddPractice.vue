@@ -176,7 +176,28 @@ export default {
       explainCode: "",
       suggest: "",
       isSupportMutilLangue: false,
-      listLangue: null,
+      listLangue: [
+        {
+          langueName: "Java",
+          id: 1,
+        },
+        {
+          langueName: "C#",
+          id: 2,
+        },
+        {
+          langueName: "Javascript",
+          id: 3,
+        },
+        {
+          langueName: "Python",
+          id: 4,
+        },
+        {
+          langueName: "C/C++",
+          id: 5,
+        },
+      ],
       defaultLangue: null,
       dialog: false,
       btnLoading: false,
@@ -258,9 +279,6 @@ export default {
   props: {
     getLessonDetail: Function,
     setDialogOff: Function,
-  },
-  created() {
-    this.getLangueOption();
   },
 };
 </script>

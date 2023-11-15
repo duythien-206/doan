@@ -12,9 +12,9 @@ namespace DJ_UploadFile.Services
 {
     public class CloudinaryUpload
     {
-        static string cloudName = "dushydq6r";
-        static string apiKey = "856473519683811";
-        static string apiSecret = "zhh1gmffet0xFszsh34RGwweEGY";
+        static string cloudName = "dws2nd8hi";
+        static string apiKey = "921311949458464";
+        static string apiSecret = "DEac6l_CwN9xOjDVzuzCCBpdhxY";
         static private readonly Random rnd = new Random();
 
         static public

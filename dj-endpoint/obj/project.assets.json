@@ -3467,19 +3467,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DJ\\.nuget\\packages\\": {}
+    "C:\\Users\\lethi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DJ\\source\\repos\\New folder\\dj-endpoint\\dj-endpoint.csproj",
+      "projectUniqueName": "C:\\Users\\lethi\\OneDrive\\Documents\\GitHub\\doan\\dj-endpoint\\dj-endpoint.csproj",
       "projectName": "dj-endpoint",
-      "projectPath": "C:\\Users\\DJ\\source\\repos\\New folder\\dj-endpoint\\dj-endpoint.csproj",
-      "packagesPath": "C:\\Users\\DJ\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DJ\\source\\repos\\New folder\\dj-endpoint\\obj\\",
+      "projectPath": "C:\\Users\\lethi\\OneDrive\\Documents\\GitHub\\doan\\dj-endpoint\\dj-endpoint.csproj",
+      "packagesPath": "C:\\Users\\lethi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lethi\\OneDrive\\Documents\\GitHub\\doan\\dj-endpoint\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lethi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3487,18 +3487,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\DJ\\source\\repos\\New folder\\dj-actionlayer\\dj-actionlayer.csproj": {
-              "projectPath": "C:\\Users\\DJ\\source\\repos\\New folder\\dj-actionlayer\\dj-actionlayer.csproj"
+            "C:\\Users\\lethi\\OneDrive\\Documents\\GitHub\\doan\\dj-actionlayer\\dj-actionlayer.csproj": {
+              "projectPath": "C:\\Users\\lethi\\OneDrive\\Documents\\GitHub\\doan\\dj-actionlayer\\dj-actionlayer.csproj"
             },
-            "C:\\Users\\DJ\\source\\repos\\New folder\\dj-webdesigncore\\dj-webdesigncore.csproj": {
-              "projectPath": "C:\\Users\\DJ\\source\\repos\\New folder\\dj-webdesigncore\\dj-webdesigncore.csproj"
+            "C:\\Users\\lethi\\OneDrive\\Documents\\GitHub\\doan\\dj-webdesigncore\\dj-webdesigncore.csproj": {
+              "projectPath": "C:\\Users\\lethi\\OneDrive\\Documents\\GitHub\\doan\\dj-webdesigncore\\dj-webdesigncore.csproj"
             }
           }
         }
@@ -3549,7 +3548,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
