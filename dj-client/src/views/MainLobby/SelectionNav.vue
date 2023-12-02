@@ -16,7 +16,7 @@
         @click="setActiveMenu(2)"
       />
     </router-link>
-    <!-- <router-link to="/home/post" style="text-decoration: none">
+    <router-link to="/home/post" style="text-decoration: none">
       <BtnNav
         icon="fa-regular fa-calendar-plus"
         title="Bài viết"
@@ -25,7 +25,7 @@
       />
     </router-link>
     <a
-      href="https://www.youtube.com/playlist?list=PLMghwUOMNMIqgqzXDhfh2D2ED57Suoi77"
+      href="https://www.youtube.com/channel/UCZM6u4XLlAMLaNTGVQRC9EQ"
       style="text-decoration: none"
       target="_blank"
     >
@@ -36,7 +36,7 @@
         @click="setActiveMenu(4)"
       />
     </a>
-    <router-link to="/home/event-main" style="text-decoration: none">
+    <!-- <router-link to="/home/event-main" style="text-decoration: none">
       <BtnNav
         icon="fa-regular fa-calendar-days"
         title="Sự kiện"

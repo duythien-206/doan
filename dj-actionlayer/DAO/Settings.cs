@@ -27,7 +27,6 @@ public static string SecretKey()
         public static string enviroment()
         {
             return "http://localhost:8080";
-         //   return "https://dj-xuyenchi.edu.vn";
         }
         public static string defaultImage()
         {
@@ -39,7 +38,7 @@ public static string SecretKey()
         }
         public static string adminQA()
         {
-            return "https://res.cloudinary.com/dushydq6r/image/upload/v1686399692/cfd3e6aeb2db6f8536ca_zfeupb.jpg";
+            return "https://res.cloudinary.com/dws2nd8hi/image/upload/v1701528844/z4937126483635_a8e9570ca80f7ecc0a6aa67121344603_gey0hu.jpg";
         }
         public static string youtubeAPIv3Key()
         {

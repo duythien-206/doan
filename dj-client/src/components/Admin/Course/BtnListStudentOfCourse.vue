@@ -94,7 +94,7 @@ export default {
   name: "BtnListStudentOfCourse",
   components: { ProgressBtn, UserDetail },
   props: {
-    courseId: Number,
+    item: Number,
   },
   data: () => ({
     dialog: false,

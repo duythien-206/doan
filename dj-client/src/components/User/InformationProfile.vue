@@ -32,7 +32,7 @@
               style="margin-right: 4px"
             />Là thành viên của
             <span style="font-weight: 600">Học lập trình</span> từ
-            {{ " " + item.joinTime }}
+            {{ " " + item?.joinTime }}
           </span>
         </div>
         <div class="activity">
@@ -78,7 +78,7 @@
             Các khóa học đã đăng ký
           </h4>
           <CourseResigterItem
-            v-for="(item, index) in item.resigtedCourse"
+            v-for="(item, index) in item?.resigtedCourse"
             :key="index"
             :item="item"
           >

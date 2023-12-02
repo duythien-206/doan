@@ -6,16 +6,16 @@
       style="border-bottom-right-radius: 15px; border-bottom-left-radius: 15px"
     />
     <div class="backgound-avatar">
-      <img :src="item.avatar" alt="Hình ảnh" class="avatar" />
+      <img :src="item?.avatar" alt="Hình ảnh" class="avatar" />
     </div>
     <div class="user-name">
       <span
-        >{{ item.fullName }}
+        >{{ item?.fullName }}
         <img
           :src="require('../../assets/kyc.png')"
           alt="Hình ảnh"
           class="kyc"
-          v-if="item.isKYC"
+          v-if="item?.isKYC"
         />
       </span>
     </div>

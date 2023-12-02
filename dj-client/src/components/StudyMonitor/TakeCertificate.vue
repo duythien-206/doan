@@ -43,13 +43,13 @@
           </div>
           <div class="signature">
             <img
-              :src="require(`../../assets/chuky.png`)"
+              :src="require(`../../assets/thien.png`)"
               alt="logo"
               style="height: 75px"
             />
           </div>
           <div class="signature2">
-            <span>Đỗ Quang Anh</span>
+            <span>Lê Duy Thiên</span>
           </div>
         </div>
       </div>
@@ -62,7 +62,7 @@
         type=""
         name=""
         :value="
-          `https://dj-xuyenchi.edu.vn/#/home/certificate/` +
+          `http://localhost:8080/#/home/certificate/` +
           this.$route.params.courseId +
           `/` +
           this.$route.params.userId

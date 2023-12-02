@@ -77,7 +77,6 @@
                     <v-select
                       label="Độ khó"
                       :items="optionLevel"
-                      :rules="rules"
                       v-model="courseLevel"
                       item-title="levelName"
                       persistent-hint
@@ -98,7 +97,6 @@
                     <v-select
                       label="Dạng khóa học"
                       :items="optionType"
-                      :rules="rules"
                       v-model="courseType"
                       item-title="courseTypeName"
                       persistent-hint

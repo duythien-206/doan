@@ -8,8 +8,8 @@
     />
     <CodeHome />
     <ContactAdvice />
-    <!-- <PostList :postList="postList" />
-    <BlogList :blogList="blogList" /> -->
+    <PostList :postList="postList" />
+    <BlogList :blogList="blogList" />
   </div>
 </template>
 
@@ -28,8 +28,8 @@ export default {
   components: {
     HeaderSlider,
     CourseList,
-    // PostList,
-    // BlogList,
+    PostList,
+    BlogList,
     ContactAdvice,
     CodeHome,
   },

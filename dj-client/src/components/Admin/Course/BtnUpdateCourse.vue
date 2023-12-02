@@ -83,7 +83,6 @@
                     <v-select
                       label="Độ khó"
                       :items="optionLevel"
-                      :rules="rules"
                       v-model="courseLevel"
                       item-title="levelName"
                       persistent-hint
@@ -96,7 +95,6 @@
                     <v-select
                       label="Dạng khóa học"
                       :items="optionType"
-                      :rules="rules"
                       v-model="courseType"
                       item-title="courseTypeName"
                       persistent-hint
@@ -110,7 +108,7 @@
                       hint="Số lượng học phần"
                       required
                       v-model="chapterCount"
-                      :rules="[rules.validValue, rules.validNumber]"
+                      :rules="[rules.validValue]"
                     ></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="4" md="4">
@@ -119,14 +117,13 @@
                       hint="Số bài lượng bài học"
                       required
                       v-model="lessonCount"
-                      :rules="[rules.validValue, rules.validNumber]"
+                      :rules="[rules.validValue]"
                     ></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="4" md="4">
                     <v-select
                       label="Trạng thái khóa học"
                       :items="optionStatus"
-                      :rules="rules"
                       v-model="courseStatus"
                       item-title="courseStatusName"
                       persistent-hint
@@ -149,7 +146,7 @@
                       hint="Số người đăng ký khóa học"
                       required
                       v-model="registerCount"
-                      :rules="[rules.validValue, rules.validNumber]"
+                      :rules="[rules.validValue]"
                     ></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="4" md="4">
@@ -158,7 +155,7 @@
                       hint="Sỗ học viên đã hoàn thành khóa học"
                       required
                       v-model="doneCount"
-                      :rules="[rules.validValue, rules.validNumber]"
+                      :rules="[rules.validValue]"
                     ></v-text-field>
                   </v-col>
                   <v-col cols="12">
@@ -241,10 +238,7 @@ export default {
     opt: false,
     rules: {
       validValue: (value) =>
-        value.trim().length > 0 || "Không được để trống thông tin này!",
-      validNumber: (value) =>
-        /^(0|[1-9][0-9]*)$/.test(value.trim()) ||
-        "Giá trị phải là số và lớn hơn 0!",
+        value.length > 0 || "Không được để trống thông tin này!",
     },
   }),
   methods: {

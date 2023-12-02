@@ -154,7 +154,7 @@ export default {
         },
         {
           icon: "mdi mdi-table-account",
-          title: "Vlog của Xuyên Chi",
+          title: "Vlog của Thiên",
           subnav: [
             {
               icon: "mdi mdi-note-multiple-outline",

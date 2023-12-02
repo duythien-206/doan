@@ -16,7 +16,7 @@
             'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
         "
       >
-        Xuyên Chi Vlog
+        Lê Thiên Vlog
       </span>
       <a
         href="https://www.youtube.com/channel/UCeJJbBp9ZSYwFK-U0YBY1pw"
